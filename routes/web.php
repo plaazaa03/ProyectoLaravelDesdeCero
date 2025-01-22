@@ -26,3 +26,9 @@ Route::get('/crearJuego', [CochesController::class,'create'])->name('crearCoche'
 
 // Ruta para guardar coches
 Route::post('/guardarCoche', [CochesController::class,'store'])->name('guardarCoche');
+
+// Ruta para editar coches
+Route::get('/editarCoche/{id}', [CochesController::class,'edit'])->name('editarCoche');
+
+// Ruta para actualizar coches
+Route::put('/actualizarCoche/{id}', [CochesController::class,'update'])->name('actualizarCoche');
