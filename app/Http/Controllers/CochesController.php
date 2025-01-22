@@ -10,10 +10,17 @@ class CochesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $coches = Coche::all();
-        return view('coches', compact('coches'));
+        // Vamos a listar los coches con filtro
+        $query = coche::query();
+        $request->has('marca');
+        if($request->has('marca')) {
+            $query->where('marca', 'like', '%'.$request->get('nombre').'%');
+            
+        }
+        $coches = $query->get();
+        return view('coches', ['coches' => $coches]);
     }
 
     /**
