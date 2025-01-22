@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class coche extends Model
 {
     use HasFactory;
+    protected $fillable = ['marca', 'color'];
 }

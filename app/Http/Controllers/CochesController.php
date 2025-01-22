@@ -21,6 +21,7 @@ class CochesController extends Controller
      */
     public function create()
     {
+        // Vamos a crear un coche
         return view('crearCoche');
     }
 
@@ -29,7 +30,13 @@ class CochesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Vamos a guardar el coche
+        $request->validate([
+            'marca' => 'string|required',
+            'color' => 'string|required'
+        ]);
+        coche::create($request->all());
+        return redirect()->route('index')->with('success', 'Coche creado correctamente');
     }
 
     /**

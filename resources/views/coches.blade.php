@@ -14,6 +14,7 @@
     @foreach ($coches as $coche)
         <p>{{ $coche->id }} - {{ $coche->marca }} - {{ $coche->color }}</p>
     @endforeach
+    <a href="{{ route('crearCoche') }}">Crear coche</a>
     
 </body>
 </html>

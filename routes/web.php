@@ -3,7 +3,6 @@
 use App\Http\Controllers\CochesController;
 use Illuminate\Support\Facades\Route;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/coches', [CochesController::class, 'index']);
+// Ruta para la vista de coches
+Route::get('/coches', [CochesController::class, 'index'])->name('index');
+
+// Ruta para crear coches
+Route::get('/crearJuego', [CochesController::class,'create'])->name('crearCoche');
+
+// Ruta para guardar coches
+Route::post('/guardarCoche', [CochesController::class,'store'])->name('guardarCoche');
