@@ -9,8 +9,8 @@
     <form method="post" action= {{ route('guardarCoche') }} >
         <!-- token de seguridad -->
         @csrf
-        <input type="text" name="marca" placeholder="marca">
-        <input type="text" name="color" placeholder="color">
+        <input type="text" name="marca" placeholder="marca" required>
+        <input type="text" name="color" placeholder="color" required>
         <input type="submit" value="Crear">
     </form>
 </body>
