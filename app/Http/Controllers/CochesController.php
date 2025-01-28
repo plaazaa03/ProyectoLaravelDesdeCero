@@ -82,6 +82,8 @@ class CochesController extends Controller
      */
     public function destroy(string $id)
     {
-        
+        $coche = coche::findOrFail($id);
+        $coche->delete();
+        return redirect()->route('index')->with('success', 'Coche eliminado correctamente');
     }
 }

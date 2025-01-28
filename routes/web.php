@@ -34,5 +34,4 @@ Route::get('/editarCoche/{id}', [CochesController::class,'edit'])->name('editarC
 Route::put('/actualizarCoche/{id}', [CochesController::class,'update'])->name('actualizarCoche');
 
 // Ruta para eliminar coches
-Route::delete('/eliminarCoche/{id}', [CochesController::class,'destroy'])->name('eliminarCoche');
-
+Route::get('/eliminarCoche/{id}', [CochesController::class,'destroy'])->name('eliminarCoche');
