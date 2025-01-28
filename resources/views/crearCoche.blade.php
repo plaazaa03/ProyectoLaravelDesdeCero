@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<title>Crear Coche</title>
+<link rel='stylesheet' type='text/css' media='screen' href='{{ asset('css/crearCoche.css') }}'>
 </head>
 <body>
     <h1>Crear Coche</h1>
