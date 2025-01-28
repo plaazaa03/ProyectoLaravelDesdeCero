@@ -16,10 +16,12 @@
     </form>
     
     @foreach ($coches as $coche)
-        <p>{{ $coche->id }} - {{ $coche->marca }} - {{ $coche->color }}</p>
-    @endforeach
+        <p>{{ $coche->id }} - {{ $coche->marca }} - {{ $coche->color }}</p><a href="{{ route('editarCoche', ['id' => $coche->id]) }}">Editar</a>
+        <a href="{{ route('eliminarCoche', ['id' => $coche->id]) }}">Eliminar</a>
+        @endforeach
     <a href="{{ route('crearCoche') }}">Crear coche</a>
     
-    
+
+
 </body>
 </html>

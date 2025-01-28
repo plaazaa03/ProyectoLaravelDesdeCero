@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/coches', [CochesController::class, 'index'])->name('index');
 
 // Ruta para crear coches
-Route::get('/crearJuego', [CochesController::class,'create'])->name('crearCoche');
+Route::get('/crearCoche', [CochesController::class,'create'])->name('crearCoche');
 
 // Ruta para guardar coches
 Route::post('/guardarCoche', [CochesController::class,'store'])->name('guardarCoche');
