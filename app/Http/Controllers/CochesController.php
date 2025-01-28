@@ -16,7 +16,7 @@ class CochesController extends Controller
         $query = coche::query();
         $request->has('marca');
         if($request->has('marca')) {
-            $query->where('marca', 'like', '%'.$request->get('nombre').'%');
+            $query->where('marca', 'like', '%'.$request->get('marca').'%');
             
         }
         $coches = $query->get();

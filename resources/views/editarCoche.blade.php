@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Editar Coche</title>
-<link rel='stylesheet' type='text/css' media='screen' href='{{ asset('css/editarCoche.css') }}'>
+    <title>Editar Coche</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='{{ asset('css/editarCoche.css') }}'>
 </head>
+
 <body>
     <h1>Editar Coche</h1>
-    <form method="post" action= {{ route('actualizarCoche', $coche->id) }} >
+    <form method="post" action={{ route('actualizarCoche', $coche->id) }}>
         <!-- token de seguridad -->
         @csrf
         <!-- metodo de envio para actualizar el juego -->
@@ -16,4 +18,5 @@
         <input type="submit" value="Editar">
     </form>
 </body>
+
 </html>
