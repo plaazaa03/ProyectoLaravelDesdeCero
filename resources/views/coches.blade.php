@@ -10,6 +10,8 @@
 </head>
 
 <body>
+<button><a href="{{ route('crearCoche') }}">Crear coche</a></button>
+<button><a href="{{ route('coches.filtrados') }}">Filtado de Coches</a></button>
     <h1>Listados de los coches</h1>
     <form method="GET" action={{ route('index') }}>
         <input type="text" name="marca" placeholder="Filtrado por marca">
@@ -22,9 +24,8 @@
             <button><a href="{{ route('eliminarCoche', ['id' => $coche->id]) }}">Eliminar</a></button>
         @endforeach
         <button><a href="{{ route('crearCoche') }}">Crear coche</a></button>
+        <button><a href="{{ route('coches.filtrados') }}">Filtrado de Coches</a></button>
     </div>
-
-
 </body>
 
 </html>

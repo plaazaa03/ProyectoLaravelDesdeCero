@@ -86,4 +86,11 @@ class CochesController extends Controller
         $coche->delete();
         return redirect()->route('index')->with('success', 'Coche eliminado correctamente');
     }
+
+    public function filtrados()
+    {
+        $coches = Coche::marca('Fiat')->color('Rojo')->get();
+
+        return view('coches', compact('coches'));
+    }
 }

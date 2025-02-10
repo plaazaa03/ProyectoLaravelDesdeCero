@@ -35,3 +35,7 @@ Route::put('/actualizarCoche/{id}', [CochesController::class,'update'])->name('a
 
 // Ruta para eliminar coches
 Route::get('/eliminarCoche/{id}', [CochesController::class,'destroy'])->name('eliminarCoche');
+
+// Ruta para mostrar coches filtrados por marca y color
+Route::get('/coches/filtrados', [CochesController::class, 'filtrados'])->name('coches.filtrados');
+
